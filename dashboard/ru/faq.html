@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +33,7 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <header class="header contain-to-grid">
+    <div class="contain-to-grid">
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
@@ -46,18 +47,19 @@
         </ul>
 
         <section class="top-bar-section">
-          <!-- Left Nav Section -->
-          <ul class="left">
-              <li class="item active"><a href="/dashboard/ru/faq.html">ЧаВО</a></li>
-              <li class="item "><a href="/dashboard/ru/howto.html">HOW-TO Guides</a></li>
-              <li class="item "><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
-              <li class="item "><a href="/phpmyadmin/">phpMyAdmin</a></li>
+          <!-- Right Nav Section -->
+          <ul class="right">
+              <li class=""><a href="/applications.html">Applications</a></li>
+              <li class="active"><a href="/dashboard/ru/faq.html">ЧаВО</a></li>
+              <li class=""><a href="/dashboard/ru/howto.html">HOW-TO Guides</a></li>
+              <li class=""><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+              <li class=""><a href="/phpmyadmin/">phpMyAdmin</a></li>
           </ul>
         </section>
       </nav>
-    </header>
+    </div>
 
-    <div class="wrapper">
+    <div id="wrapper">
       <div class="hero">
   <div class="row">
     <div class="large-12 columns">
@@ -86,9 +88,9 @@
       <p>Если вы выберите корневой каталог "C:\\" как папку назначения, вы не должны запускать "setup_xampp.bat".</p>
       <p>Также как в версии с установщиком, теперь вы можете использовать контрольную панель XAMPP (XAMPP Control Panel) для дополнительных задач.</p>
       </dd>
-      <dt>XAMPP включает в себя MySQL или MariaDB?</dt>
+      <dt>Does XAMPP include MySQL or MariaDB?</dt>
       <dd>
-      <p>С момента выхода XAMPP 5.5.30 и 5.6.14, XAMPP предоставляет MariaDB вместо MySQL. Команды и инструменты для обоих одни и те же.</p>
+      <p>Since XAMPP 5.5.30 and 5.6.14, XAMPP ships MariaDB instead of MySQL. The commands and tools are the same for both.</p>
       </dd>
       <dt>Как мне запустить XAMPP без установки?</dt>
       <dd>
@@ -126,7 +128,7 @@
         <code>\xampp\filezilla_stop.bat</code></li></ul></p>
       </p>
       </dd>
-      <dt>Как мне проверить, что всё сработало?</dt>
+      <dt>Как я мне проверить что всё сработало?</dt>
       <dd>
       <p>Введите следующую URL в ваш любимый браузер:</p>
       <p><code>http://localhost/</code> или  <code>http://127.0.0.1/</code> </p>
@@ -359,7 +361,7 @@ EnableMMAP off</code></p>
           </code>
           <p>Remember to replace the dummy values shown with your actual Gmail address and account password. If you don't plan to use Gmail's SMTP server, replace the SMTP host details with appropriate values for your organization or ISP's SMTP server.</p>
           </li>
-          <li>Перезапустите сервер Apache, используя панель управления XAMPP.
+          <li>Restart the Apache server using the XAMPP control panel.
           </li>
         </ul>
         <p>You can now use PHP's mail() function to send email from your application.</p> 
@@ -377,18 +379,18 @@ EnableMMAP off</code></p>
 
       <dt>Как ограничить доступ к PhpMyAdmin извне?</dt>
       <dd>
-      <p>В базовой конфигурации XAMPP phpMyAdmin доступен только с того же хоста, на котором запущен XAMPP, по адресу <a href="http://127.0.0.1">http://127.0.0.1</a> или <a href="http://localhost">http://localhost</a>.</p>
+      <p>In the basic configuration of XAMPP, phpMyAdmin is accessible only from the same host that XAMPP is running on, at http://127.0.0.1 or http://localhost.</p>
       <p>Прежде чем вы сможете получить доступ к серверу MySQL, PhpMyAdmin запросит у вас имя пользователя и пароль. Не забудьте установить пароль для "root"  пользователя в первую очередь.</p>
       </dd>
 
-      <dt>Как мне включить доступ к phpMyAdmin извне?</dt>
+      <dt>How do I enable access to phpMyAdmin from the outside?</dt>
       <dd>
-      <p>В базовой конфигурации XAMPP phpMyAdmin доступен только с того же хоста, на котором запущен XAMPP, по адресу <a href="http://127.0.0.1">http://127.0.0.1</a> или <a href="http://localhost">http://localhost</a>.</p>
-      <p>ВАЖНО: Включение внешнего доступа для phpMyAdmin в производственных средах представляет собой значительный риск для безопасности. Вам настоятельно рекомендуется разрешать доступ только с localhost. Удаленный злоумышленник может воспользоваться любой существующей уязвимостью для выполнения кода или изменения ваших данных.</p>
-      <p>Чтобы включить удалённый доступ к phpMyAdmin, следуйте шагам ниже:</p>
+      <p>In the basic configuration of XAMPP, phpMyAdmin is accessible only from the same host that XAMPP is running on, at http://127.0.0.1 or http://localhost.</p>
+      <p>IMPORTANT: Enabling external access for phpMyAdmin in production environments is a significant security risk. You are strongly advised to only allow access from localhost. A remote attacker could take advantage of any existing vulnerability for executing code or for modifying your data.</p>
+      <p>To enable remote access to phpMyAdmin, follow these steps:</p>
       <ul>
         <li>Edit the apache\conf\extra\httpd-xampp.conf file in your XAMPP installation directory.</li>
-        <li>В этом файле, найдите строки, указанные снизу. 
+        <li>Within this file, find the lines below. 
           <p><code>
               Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
               &lt;Directory "C:/xampp/phpMyAdmin"&gt;
@@ -396,14 +398,14 @@ EnableMMAP off</code></p>
                 Require local
           </code></p>
         </li>
-        <li>Затем, замените 'Require local' на 'Require all granted'.</li>
+        <li>Then replace 'Require local' with 'Require all granted'.</li>
           <p><code>
               Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
               &lt;Directory "C:/xampp/phpMyAdmin"&gt;
                 AllowOverride AuthConfig
                 Require all granted
           </code></p>
-        <li>Перезапустите сервер Apache, используя панель управления XAMPP.</li>
+        <li>Restart the Apache server using the XAMPP control panel.</li>
       </ul>
       </dd>
       
@@ -448,7 +450,7 @@ EnableMMAP off</code></p>
       <dt>How can I get XAMPP working on port 80 under Windows 10?</dt>
       <dd>
       <p>By default, Windows 10 starts Microsoft IIS on port 80, which is the same default port used by Apache in XAMPP. As a result, Apache cannot bind to port 80.</p>
-      <p>To deactivate IIS from running on port 80, follow these steps:</p>
+      <p>To disable IIS from running on port 80, follow these steps:</p>
       <ul>
         <li>Open the Services panel in Computer Management.</li>
         <li>Search for the 'World Wide Web Publishing Service' and select it.</li>
@@ -470,7 +472,7 @@ EnableMMAP off</code></p>
       <dd>
         <p>The main XAMPP configuration files are located as follows:</p>
         <ul>
-          <li>Файлы конфигурации Apache: \xampp\apache\conf\httpd.conf, \xampp\apache\conf\extra\httpd-xampp.conf</li>
+          <li>Apache configuration file: \xampp\apache\conf\httpd.conf, \xampp\apache\conf\extra\httpd-xampp.conf</li>
           <li>PHP configuration file: \xampp\php\php.ini</li>
           <li>MySQL configuration file: \xampp\mysql\bin\my.ini</li>
           <li>FileZilla Server configuration file: \xampp\FileZillaFTP\FileZilla Server.xml</li>
@@ -486,25 +488,30 @@ EnableMMAP off</code></p>
 
     </div>
 
-    <footer class="footer row">
-      <div class="columns">
-        <div class="footer_lists-container row collapse">
-          <div class="footer_social columns large-2">
-            <ul class="social">
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-8 columns">
+              <ul class="social">
   <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
   <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+  <li class="google"><a href="https://plus.google.com/+xampp/posts">Add us to your G+ Circles</a></li>
 </ul>
 
-            <p class="footer_copyright">Copyright (c) 2022, Apache Friends</p>
+              <ul class="inline-list">
+                <li><a href="https://www.apachefriends.org/blog.html">Блог</a></li>
+                <li><a href="https://www.apachefriends.org/privacy_policy.html">Политика приватности</a></li>
+                <li>
+<a target="_blank" href="http://www.fastly.com/">                    CDN предусмотрено
+                    <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+</a>                </li>
+              </ul>
+            </div>
+            <div class="large-4 columns">
+              <p class="text-right">Copyright (c) 2018, Apache Friends</p>
+            </div>
           </div>
-          <ul class="footer_links columns large-9">
-            <li><a href="https://www.apachefriends.org/blog.html">Блог</a></li>
-            <li><a href="/privacy_policy.html">Политика приватности</a></li>
-            <li>
-<a target="_blank" href="http://www.fastly.com/">                CDN предусмотрено
-                <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
-</a>            </li>
-          </ul>
         </div>
       </div>
     </footer>

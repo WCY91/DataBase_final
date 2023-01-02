@@ -1,12 +1,12 @@
 /*生成6位隨機數*/
 
-$(document).ready(function(){
-
+$(document).ready(function(){ 
+  
     $('#AllHotel').click(function(){
         console.log("AllHotel click");
         $.ajax({
             type: 'GET',
-            url: 'select_AllHotel.php',
+            url: '/php/select_AllHotel.php',
             success:function(allHotel){
                 console.log("AllHotel="+allHotel);
                 $("#result").html("");
@@ -21,7 +21,7 @@ $(document).ready(function(){
     $('#AllSight').click(function(){
         $.ajax({
             type: 'GET',
-            url: 'select_AllSight.php',
+            url: '/php/select_AllSight.php',
             success:function(allSight){
                 console.log("allSight="+allSight);
                 $("#result").html("");

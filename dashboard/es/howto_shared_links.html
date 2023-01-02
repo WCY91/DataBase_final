@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
+
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +33,7 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <header class="header contain-to-grid">
+    <div class="contain-to-grid">
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
@@ -46,23 +47,25 @@
         </ul>
 
         <section class="top-bar-section">
-          <!-- Left Nav Section -->
-          <ul class="left">
-              <li class="item "><a href="/dashboard/es/faq.html">Preguntas frecuentes</a></li>
-              <li class="item active"><a href="/dashboard/es/howto.html">HOW-TO Guides</a></li>
-              <li class="item "><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
-              <li class="item "><a href="/phpmyadmin/">phpMyAdmin</a></li>
+          <!-- Right Nav Section -->
+          <ul class="right">
+              <li class=""><a href="/applications.html">Applications</a></li>
+              <li class=""><a href="/dashboard/es/faq.html">Preguntas frecuentes</a></li>
+              <li class="active"><a href="/dashboard/es/howto.html">HOW-TO Guides</a></li>
+              <li class=""><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+              <li class=""><a href="/phpmyadmin/">phpMyAdmin</a></li>
           </ul>
         </section>
       </nav>
-    </header>
+    </div>
 
-    <div class="wrapper">
+    <div id="wrapper">
       <h5><a href="/dashboard/docs/backup-restore-mysql.html">Backup and Restore MySQL/MariaDB Databases</a></h5>
 <h5><a href="/dashboard/docs/transfer-files-ftp.html">Configure FTP Access</a></h5>
 <h5><a href="/dashboard/docs/configure-vhosts.html">Configure Virtual Hosts</a></h5>
 <h5><a href="/dashboard/docs/configure-wildcard-subdomains.html">Configure Wildcard-Based Subdomains</a></h5>
 <h5><a href="/dashboard/docs/deploy-git-app.html">Deploy an Application Using Git</a></h5>
+<h5><a href="/dashboard/docs/install-wordpress.html">Get Started Quickly with WordPress</a></h5>
 <h5><a href="/dashboard/docs/reset-mysql-password.html">Reset the MySQL/MariaDB Root Password</a></h5>
 <h5><a href="/dashboard/docs/send-mail.html">Send Mail with PHP</a></h5>
 <h5><a href="/dashboard/docs/use-sqlite.html">Use SQLite with PHP</a></h5>
@@ -77,25 +80,30 @@
 
     </div>
 
-    <footer class="footer row">
-      <div class="columns">
-        <div class="footer_lists-container row collapse">
-          <div class="footer_social columns large-2">
-            <ul class="social">
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-8 columns">
+              <ul class="social">
   <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
   <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+  <li class="google"><a href="https://plus.google.com/+xampp/posts">Add us to your G+ Circles</a></li>
 </ul>
 
-            <p class="footer_copyright">Copyright (c) 2022, Apache Friends</p>
+              <ul class="inline-list">
+                <li><a href="https://www.apachefriends.org/blog.html">Blog</a></li>
+                <li><a href="https://www.apachefriends.org/privacy_policy.html">Política de privacidad</a></li>
+                <li>
+<a target="_blank" href="http://www.fastly.com/">                    CDN proporcionado por
+                    <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+</a>                </li>
+              </ul>
+            </div>
+            <div class="large-4 columns">
+              <p class="text-right">Copyright (c) 2018, Apache Friends</p>
+            </div>
           </div>
-          <ul class="footer_links columns large-9">
-            <li><a href="https://www.apachefriends.org/blog.html">Blog</a></li>
-            <li><a href="/privacy_policy.html">Política de privacidad</a></li>
-            <li>
-<a target="_blank" href="http://www.fastly.com/">                CDN proporcionado por
-                <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
-</a>            </li>
-          </ul>
         </div>
       </div>
     </footer>

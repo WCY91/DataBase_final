@@ -2,6 +2,7 @@
 <html lang="jp">
   <head>
     <meta charset="utf-8">
+
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +33,7 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <header class="header contain-to-grid">
+    <div class="contain-to-grid">
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
@@ -46,18 +47,19 @@
         </ul>
 
         <section class="top-bar-section">
-          <!-- Left Nav Section -->
-          <ul class="left">
-              <li class="item "><a href="/dashboard/jp/faq.html">FAQ</a></li>
-              <li class="item "><a href="/dashboard/jp/howto.html">HOW-TO Guides</a></li>
-              <li class="item "><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
-              <li class="item "><a href="/phpmyadmin/">phpMyAdmin</a></li>
+          <!-- Right Nav Section -->
+          <ul class="right">
+              <li class=""><a href="/applications.html">Applications</a></li>
+              <li class=""><a href="/dashboard/jp/faq.html">FAQ</a></li>
+              <li class=""><a href="/dashboard/jp/howto.html">HOW-TO Guides</a></li>
+              <li class=""><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+              <li class=""><a href="/phpmyadmin/">phpMyAdmin</a></li>
           </ul>
         </section>
       </nav>
-    </header>
+    </div>
 
-    <div class="wrapper">
+    <div id="wrapper">
       <div class="hero">
   <div class="row">
     <div class="large-12 columns">
@@ -67,7 +69,7 @@
 </div>
 <div class="row">
   <div class="large-12 columns">
-    <h2>Welcome to XAMPP for Windows 8.1.12</h2>
+    <h2>Welcome to XAMPP for Windows 8.1.6</h2>
   </div>
 </div>
 <div class="row">
@@ -78,6 +80,7 @@
     </p>
     <p>
       XAMPP is meant only for development purposes. It has certain configuration settings that make it easy to develop locally but that are insecure if you want to have your installation accessible to others.
+      If you want have your XAMPP accessible from the internet, make sure you understand the implications and you checked the <a href="/dashboard/jp/faq.html">FAQ</a> to learn how to protect your site. Alternatively you can use <a href="https://bitnami.com/stack/wamp">WAMP</a>, <a href="https://bitnami.com/stack/mamp">MAMP</a> or <a href="https://bitnami.com/stack/lamp">LAMP</a> which are similar packages which are more suitable for production.
     </p>
     <p>
       Start the XAMPP Control Panel to check the server status.
@@ -92,33 +95,67 @@
 <div class="row">
   <div class="large-12 columns">
     <p>
-      XAMPP は10年以上の実績があります &ndash; よってその背後には大きなコミュニティーが存在します。弊社の <a href="https://community.apachefriends.org">フォーラム</a> に参加、 %および <a href="https://www.facebook.com/we.are.xampp">Facebook</a> で「いいね」ボタンを押す、<a href="https://twitter.com/apachefriends">Twitter</a> でフォロー、このコミュニティーに参加することができます。
+      XAMPP は10年以上の実績があります &ndash; よってその背後には大きなコミュニティーが存在します。弊社の <a href="https://community.apachefriends.org">フォーラム</a> に参加、 <a href="https://www.apachefriends.org/community.html#mailing_list">メールリスト</a> に電子メールアドレスを登録、および <a href="https://www.facebook.com/we.are.xampp">Facebook</a> で「いいね」ボタンを押す、<a href="https://twitter.com/apachefriends">Twitter</a> でフォロー、 私どもを <a href="https://plus.google.com/+xampp/posts">Google+</a> サークルに追加するなどして、このコミュニティーに参加することができます。
     </p>
   </div>
 </div>
-
+<div class="row">
+  <div class="large-12 columns">
+    <h3><a href="https://translate.apachefriends.org/">translate.apachefriends.org</a> で XAMPP の翻訳にご協力ください。</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <p>
+      XAMPP を他のコミュニティーメンバーのために翻訳するのをお手伝いいただけませんか？XAMPP を他の言語に翻訳するお手伝いをしてくださる方を探しています。弊社は特別サイト <a href="https://translate.apachefriends.org/">translate.apachefriends.org</a> を設け、ここでユーザーの皆さんに翻訳してもらっています。
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <h3>Install applications on XAMPP using Bitnami</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <p>
+    Apache Friends and Bitnami are cooperating to make dozens of open source applications available on XAMPP, for free. Bitnami-packaged applications include Wordpress, Drupal, Joomla! and dozens of others and can be deployed with one-click installers.
+    Visit the <a target="_blank" href="http://bitnami.com/stack/xampp?utm_source=bitnami&amp;utm_medium=installer&amp;utm_campaign=XAMPP%2BModule">Bitnami XAMPP page</a> for details on the currently available apps.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <a href="http://bitnami.com/stack/xampp?utm_source=bitnami&utm_medium=installer&utm_campaign=XAMPP%2BModule" target="_blank"><img alt="Bitnami XAMPP page" src="/dashboard/images/bitnami-xampp.png" /></a>
+  </div>
+</div>
 
     </div>
 
-    <footer class="footer row">
-      <div class="columns">
-        <div class="footer_lists-container row collapse">
-          <div class="footer_social columns large-2">
-            <ul class="social">
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-8 columns">
+              <ul class="social">
   <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
   <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+  <li class="google"><a href="https://plus.google.com/+xampp/posts">Add us to your G+ Circles</a></li>
 </ul>
 
-            <p class="footer_copyright">Copyright (c) 2022, Apache Friends</p>
+              <ul class="inline-list">
+                <li><a href="https://www.apachefriends.org/blog.html">ブログ</a></li>
+                <li><a href="https://www.apachefriends.org/privacy_policy.html">個人情報保護方針</a></li>
+                <li>
+<a target="_blank" href="http://www.fastly.com/">                    CDNから提供
+                    <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+</a>                </li>
+              </ul>
+            </div>
+            <div class="large-4 columns">
+              <p class="text-right">Copyright (c) 2018, Apache Friends</p>
+            </div>
           </div>
-          <ul class="footer_links columns large-9">
-            <li><a href="https://www.apachefriends.org/blog.html">ブログ</a></li>
-            <li><a href="/privacy_policy.html">個人情報保護方針</a></li>
-            <li>
-<a target="_blank" href="http://www.fastly.com/">                CDNから提供
-                <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
-</a>            </li>
-          </ul>
         </div>
       </div>
     </footer>

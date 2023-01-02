@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +33,7 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277385395761685";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-    <header class="header contain-to-grid">
+    <div class="contain-to-grid">
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
@@ -46,18 +47,19 @@
         </ul>
 
         <section class="top-bar-section">
-          <!-- Left Nav Section -->
-          <ul class="left">
-              <li class="item active"><a href="/dashboard/faq.html">FAQs</a></li>
-              <li class="item "><a href="/dashboard/howto.html">HOW-TO Guides</a></li>
-              <li class="item "><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
-              <li class="item "><a href="/phpmyadmin/">phpMyAdmin</a></li>
+          <!-- Right Nav Section -->
+          <ul class="right">
+              <li class=""><a href="/applications.html">Applications</a></li>
+              <li class="active"><a href="/dashboard/faq.html">FAQs</a></li>
+              <li class=""><a href="/dashboard/howto.html">HOW-TO Guides</a></li>
+              <li class=""><a target="_blank" href="/dashboard/phpinfo.php">PHPInfo</a></li>
+              <li class=""><a href="/phpmyadmin/">phpMyAdmin</a></li>
           </ul>
         </section>
       </nav>
-    </header>
+    </div>
 
-    <div class="wrapper">
+    <div id="wrapper">
       <div class="hero">
   <div class="row">
     <div class="large-12 columns">
@@ -252,11 +254,11 @@
       <dd>
       <p><strong>User Account Control (UAC)</strong></p>
       <p>In the directory "C:\program files" you don't have full write privileges, even as Admin. Or you have only limited privileges (e.g. for ".\xampp\htdocs"). In this case you can't edit a file.</br>
-<strong>Solution:</strong> Raise your privileges within explorer (right click / security) or deactivate the user account control (UAC).</p>
+<strong>Solution:</strong> Raise your privileges within explorer (right click / security) or disable the user account control (UAC).</p>
       <p>You have installed Apache/MySQL in "C:\xampp" as Windows service. But you can't start/stop the services with the "XAMPP Control Panel" or can't uninstall them.</br></br>
-<strong>Solution:</strong> Use the service management console from Windows or deactivate UAC.</p>
+<strong>Solution:</strong> Use the service management console from Windows or disable UAC.</p>
       <p><strong>Disabling the User Account Control (UAC)</strong></p>
-      <p>To deactivate the UAC, use the program "msconfig". In "msconfig" go to "Tools", select "disable user account control" and verify your selection. Now you must restart Windows. At the same time, you can enable the UAC again.</p>
+      <p>To disable the UAC, use the program "msconfig". In "msconfig" go to "Tools", select "disable user account control" and verify your selection. Now you must restart Windows. At the same time, you can enable the UAC again.</p>
       </dd>
 
       <dt>How do I check the md5 checksum?</dt>
@@ -448,7 +450,7 @@ EnableMMAP off</code></p>
       <dt>How can I get XAMPP working on port 80 under Windows 10?</dt>
       <dd>
       <p>By default, Windows 10 starts Microsoft IIS on port 80, which is the same default port used by Apache in XAMPP. As a result, Apache cannot bind to port 80.</p>
-      <p>To deactivate IIS from running on port 80, follow these steps:</p>
+      <p>To disable IIS from running on port 80, follow these steps:</p>
       <ul>
         <li>Open the Services panel in Computer Management.</li>
         <li>Search for the 'World Wide Web Publishing Service' and select it.</li>
@@ -486,25 +488,30 @@ EnableMMAP off</code></p>
 
     </div>
 
-    <footer class="footer row">
-      <div class="columns">
-        <div class="footer_lists-container row collapse">
-          <div class="footer_social columns large-2">
-            <ul class="social">
+    <footer>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="row">
+            <div class="large-8 columns">
+              <ul class="social">
   <li class="twitter"><a href="https://twitter.com/apachefriends">Follow us on Twitter</a></li>
   <li class="facebook"><a href="https://www.facebook.com/we.are.xampp">Like us on Facebook</a></li>
+  <li class="google"><a href="https://plus.google.com/+xampp/posts">Add us to your G+ Circles</a></li>
 </ul>
 
-            <p class="footer_copyright">Copyright (c) 2022, Apache Friends</p>
+              <ul class="inline-list">
+                <li><a href="https://www.apachefriends.org/blog.html">Blog</a></li>
+                <li><a href="https://www.apachefriends.org/privacy_policy.html">Privacy Policy</a></li>
+                <li>
+<a target="_blank" href="http://www.fastly.com/">                    CDN provided by
+                    <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
+</a>                </li>
+              </ul>
+            </div>
+            <div class="large-4 columns">
+              <p class="text-right">Copyright (c) 2018, Apache Friends</p>
+            </div>
           </div>
-          <ul class="footer_links columns large-9">
-            <li><a href="https://www.apachefriends.org/blog.html">Blog</a></li>
-            <li><a href="/privacy_policy.html">Privacy Policy</a></li>
-            <li>
-<a target="_blank" href="http://www.fastly.com/">                CDN provided by
-                <img width="48" data-2x="/dashboard/images/fastly-logo@2x.png" src="/dashboard/images/fastly-logo.png" />
-</a>            </li>
-          </ul>
         </div>
       </div>
     </footer>

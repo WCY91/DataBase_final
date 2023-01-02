@@ -1,10 +1,14 @@
 /*生成6位隨機數*/
 
 $(document).ready(function () {
+  $("#back").click(function () {
 
+    location.href="/home.html";
+
+  });
     $.ajax({
         type: 'GET',
-        url: 'select_tourist.php',
+        url: '/php/select_tourist.php',
         data: 'account=' + "kai",
         success: function (allFavoriteSight) {
             console.log("allFavoriteSight="+allFavoriteSight);
