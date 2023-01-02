@@ -1,8 +1,8 @@
 <?php    
 	include "db_conn.php";
 	
-	$Account = "jacky1";
-	$SightName = "海大";
+	$Account = $_POST['account'];
+	$SightName = $_POST['sightName'];
 	
 	$query = ("insert into tourist values(?,?)");
 	$stmt =  $db->prepare($query);

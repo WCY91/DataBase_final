@@ -19,7 +19,8 @@ $(document).ready(function(){
                         if(user.Password==password){
                             localStorage.setItem("account",account);                            
                             localStorage.setItem("password",password);  
-                            localStorage.setItem("status","1");                                              
+                            localStorage.setItem("status",1);  
+                            document.getElementById('status').innerHTML=localStorage.getItem("account");                                             
                             alert("登入成功");                            
                         }
                         else{
@@ -31,10 +32,6 @@ $(document).ready(function(){
             }            
         });             
         
-        if(localStorage.getItem("status")=="1"){
-            console.log(document.getElementById('status'));
-            document.getElementById('status').innerHTML=localStorage.getItem("account"); 
-        }
     });   
     
 });
